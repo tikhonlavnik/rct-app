@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import Header from './components/header/header';
+import ContentField from './components/content-field';
+import Slider from './components/slider';
+import InfoLine from './components/infoline/infoline';
+import Counter from './components/tasklist';
+
+import style from 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import "./components/header/index"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header appName="WebApp"/>
+      <ContentField/>
+      <InfoLine/>
+      <Slider/>
+      <Counter/>
+      {/* Компонент для тасков(добавление, удаление, чекбоксы) */}
+    </>
   );
 }
 
